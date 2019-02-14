@@ -139,6 +139,60 @@ public class BaseChar{
 	    result = new BaseChar("Marcus", "Paladin", 31, 15, 15, 11, 8, 10, 8, .6, .25, .2, .25, .2, .15, .2, false, 1);
 	case "lowen":
 	    result = new BaseChar("Lowen", "Cavalier", 23, 7, 5, 7, 3, 7, 0, .9, .3, .3, .3, .5, .4, .3, false, 2);
+	case "rebecca":
+	    result = new BaseChar("Rebecca", "Archer", 17, 4, 5, 6, 4, 3, 1, .6, .4, .5, .6, .5, .15, .3, false, 1);
+	case "bartre":
+	    result = new BaseChar("Bartre", "Fighter", 29, 9, 5, 3, 4, 4, 0, .85, .5, .35, .4, .3, .3, .25, false, 2);
+	case "hector":
+	    result = new BaseChar("Hector", "Lord", 19, 7, 4, 5, 3, 8, 0, .9, .6, .45, .35, .3, .5, .25, false, 1);
+	case "oswin":
+	    result = new BaseChar("Oswin", "Knight", 28, 13, 9, 5, 3, 13, 3, .9, .4, .3, .3, .35, .55, .3, false, 9);
+	case "guy":
+	    result = new BaseChar("Guy", "Myrmidon", 21, 6, 11, 11, 5, 5, 0, .75, .3, .5, .7, .45, .15, .25, true, 3);
+	case "merlinus":
+	    result = new BaseChar("Merlinus", "Transporter", 18, 0, 4, 5, 12, 5, 2, 1.2, 0, .9, .9, 1, .3, .15, false, 5);
+	case "priscilla":
+	    result = new BaseChar("Priscilla", "Troubadour", 16, 6, 6, 8, 7, 3, 6, .45, .4, .5, .4, .65, .15, .5, false, 3);
+	case "raven":
+	    result = new BaseChar("Raven", "Mercenary", 25, 8, 11, 13, 2, 5, 1, .85, .55, .4, .45, .35, .25, .15, true, 5);
+	case "canas":
+	    result = new BaseChar("Canas", "Shaman", 21, 10, 9, 8, 7, 5, 8, .7, .45, .4, .35, .25, .25, .45, false, 8);
+	case "dart":
+	    result = new BaseChar("Dart", "Pirate", 34, 12, 8, 8, 3, 6, 1, .7, .65, .2, .6, .35, .2, .15, false, 8);
+	case "fiora":
+	    result = new BaseChar("Fiora", "Pegasus Knight", 21, 8, 11, 13, 6, 6, 7, .7, .35, .6, .5, .3, .2, .5, false, 7);
+	case "legault":
+	    result = new BaseChar("Legault", "Thief", 26, 8, 11, 15, 10, 8, 3, .6, .25, .45, .6, .6, .25, .25, true, 12);
+	case "isadora":
+	    result = new BaseChar("Isadora", "Paladin", 28, 13, 12, 16, 10, 8, 6, .75, .3, .35, .5, .45, .2, .25, false, 1);
+	case "heath":
+	    result = new BaseChar("Heath", "Wyvern Rider", 28, 11, 8, 7, 7, 10, 1, .8, .5, .5, .45, .2, .3, .2, true, 7);
+	case "hawkeye":
+	    result = new BaseChar("Hawkeye", "Berserker", 50, 18, 14, 11, 13, 14, 10, .5, .4, .3, .25, .4, .2, .35, false, 4);
+	case "geitz":
+	    result = new BaseChar("Geitz", "Warrior", 40, 17, 12, 13, 10, 11, 3, .85, .5, .3, .4, .4, .2, .2, true, 3);
+	case "pent":
+	    result = new BaseChar("Pent", "Sage", 33, 18, 21, 17, 14, 11, 16, .5, .3, .2, .4, .4, .3, .35, false, 6);
+	case "louise":
+	    result = new BaseChar("Louise", "Sniper", 28, 12, 14, 17, 16, 9, 12, .6, .4, .4, .4, .3, .2, .3, false, 4);
+	case "karel":
+	    result = new BaseChar("Karel", "Swordmaster", 31, 16, 23, 20, 15, 13, 12, .7, .3, .5, .5, .3, .1, .15, false, 8);
+	case "harken":
+	    result = new BaseChar("Harken", "Hero", 38, 21, 20, 17, 12, 15, 10, .8, .35, .3, .4, .2, .3, .25, true, 8);
+	case "nino":
+	    result = new BaseChar("Nino", "Mage", 19, 7, 8, 11, 10, 4, 7, .55, .5, .55, .6, .45, .15, .5, false, 5);
+	case "jaffar":
+	    result = new BaseChar("Jaffar", "Assassin", 34, 19, 25, 24, 10, 15, 11, .65, .15, .4, .35, .2, .3, .3, false, 13);
+	case "vaida":
+	    result = new BaseChar("Vaida", "Wyvern Lord", 43, 20, 19, 13, 11, 21, 6, .6, .45, .25, .4, .3, .25, .15, true, 9);
+	case "renault":
+	    result = new BaseChar("Renault", "Bishop", 43, 12, 22, 20, 10, 15, 18, .6, .4, .3, .35, .15, .2, .4, false, 16);
+	case "athos":
+	    result = new BaseChar("Athos", "Archsage", 40, 30, 24, 20, 25, 20, 28, 3.14, 1.59, 2.65, 3.58, 9.79, 3.23, 8.46, false, 20);
+	case "farina":
+	    result = new BaseChar("Farina", "Pegasus Knight", 24, 10, 13, 14, 10, 10, 12, .75, .5, .4, .45, .45, .25, .3, false, 12);
+	case "karla":
+	    result = new BaseChar("Karla", "Swordmaster", 29, 14, 21, 18, 16, 11, 12, .6, .25, .45, .55, .4, .1, .2, false, 5);
 	default:
 	    result = new BaseChar("NoInput", "NoInput", 0, 0, 0, 0, 0, 0, 0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, false, 0);
 	}
