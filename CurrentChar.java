@@ -62,6 +62,10 @@ public class CurrentChar{
 	return AddHP;
     }
 
+    public int getAddStr(){
+	return AddStr;
+    }
+
     public int getAddSkl(){
 	return AddSkl;
     }
