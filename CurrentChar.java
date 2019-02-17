@@ -3,27 +3,19 @@ package fe7calculator;
 public class CurrentChar{
 
     private BaseChar Bases; //Finds this character's base stats without manipulation.
-    private int CurHP, CurStr, CurSkl, CurSpd, CurLck, CurDef, CurRes, AddHP, AddStr, AddSkl, AddSpd, AddLck, AddDef, AddRes; //Creates variables for the player's current stats and added stat boosters
+    private int CurHP, CurStr, CurSkl, CurSpd, CurLck, CurDef, CurRes; //Creates variables for the player's current stats
     private String CurClass; //Creates a varibale for the player's current class.
-    private boolean HardMode; //Checks to see if the player is playing on hard mode.
 
-    public CurrentChar(BaseChar BaseStats, int HPCur, int StrCur, int SklCur, int SpdCur, int LckCur, int DefCur, int ResCur, int HPAdd, int StrAdd, int SklAdd, int SpdAdd, int LckAdd, int DefAdd, int ResAdd, String ClassCur, boolean ModeHard){
-	Bases = BaseStats;
-	CurHP = HPCur;
-	CurStr = StrCur;
-	CurSkl = SklCur;
-	CurSpd = SpdCur;
-	CurLck = LckCur;
-	CurDef = DefCur;
-	CurRes = ResCur;
-	AddHP = HPAdd;
-	AddSkl = SklAdd;
-	AddSpd = SpdAdd;
-	AddLck = LckAdd;
-	AddDef = DefAdd;
-	AddRes = ResAdd;
-	CurClass = ClassCur;
-	HardMode = ModeHard;
+    public CurrentChar(String data){
+	String[] splitted = data.split(" ");
+	CurClass = splitted[1];
+	CurHP = Integer.parseInt(splitted[3]);
+	CurStr = Integer.parseInt(splitted[4]);
+	CurSkl = Integer.parseInt(splitted[5]);
+	CurSpd = Integer.parseInt(splitted[6]);
+	CurLck = Integer.parseInt(splitted[7]);
+	CurDef = Integer.parseInt(splitted[8]);
+	CurRes = Integer.parseInt(splitted[9]);
     }
 
     public BaseChar getBases(){
@@ -58,40 +50,8 @@ public class CurrentChar{
 	return CurRes;
     }
 
-    public int getAddHP(){
-	return AddHP;
-    }
-
-    public int getAddStr(){
-	return AddStr;
-    }
-
-    public int getAddSkl(){
-	return AddSkl;
-    }
-
-    public int getAddSpd(){
-	return AddSpd;
-    }
-
-    public int getAddLck(){
-	return AddLck;
-    }
-
-    public int getAddDef(){
-	return AddDef;
-    }
-
-    public int getAddRes(){
-	return AddRes;
-    }
-
     public String getCurClass(){
 	return CurClass;
-    }
-
-    public boolean getHardMode(){
-	return HardMode;
     }
 
 }

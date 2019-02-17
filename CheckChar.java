@@ -72,26 +72,27 @@ public class CheckChar{
 	CurRes += addRes;
     }
 
-    public void addStatBoosters(CurrentChar current){ //Adds extra stats gained through stat boosting items
-	for(int AddHP = current.getAddHP(); AddHP > 0; AddHP--){
+    public void addStatBoosters(String data){ //Adds extra stats gained through stat boosting items
+	String[] splitted = data.split(" ");
+	for(int AddHP = Integer.parseInt(splitted[10]); AddHP > 0; AddHP--){
 	    CurHP += 7;
 	}
-	for(int AddStr = current.getAddStr(); AddStr > 0; AddStr--){
+	for(int AddStr = Integer.parseInt(splitted[11]); AddStr > 0; AddStr--){
 	    CurStr += 2;
 	} 
-	for(int AddSkl = current.getAddSkl(); AddSkl > 0; AddSkl--){
+	for(int AddSkl = Integer.parseInt(splitted[12]); AddSkl > 0; AddSkl--){
 	    CurSkl += 2;
 	}
-	for(int AddSpd = current.getAddSpd(); AddSpd > 0; AddSpd--){
+	for(int AddSpd = Integer.parseInt(splitted[13]); AddSpd > 0; AddSpd--){
 	    CurSpd += 2;
 	}
-	for(int AddLck = current.getAddLck(); AddLck > 0; AddLck--){
+	for(int AddLck = Integer.parseInt(splitted[14]); AddLck > 0; AddLck--){
 	    CurLck += 2;
 	}
-	for(int AddDef = current.getAddDef(); AddDef > 0; AddDef--){
+	for(int AddDef = Integer.parseInt(splitted[15]); AddDef > 0; AddDef--){
 	    CurDef += 2;
 	}
-	for(int AddRes = current.getAddRes(); AddRes > 0; AddRes--){
+	for(int AddRes = Integer.parseInt(splitted[16]); AddRes > 0; AddRes--){
 	    CurRes += 2;
 	}	
     }
@@ -105,7 +106,8 @@ public class CheckChar{
 	CurRes += type.getProRes();
     }
 
-    public void checkStatCaps(UnitType type){ //Checks to make sure a unit's stats are not over the class's stat caps
+    public void checkStatCaps(){ //Checks to make sure a unit's stats are not over the class's stat caps
+	UnitType type = UnitType.createClass(CharClass);
 	if(CurHP > type.getMaxHP()){
 	    CurHP = type.getMaxHP();
 	}
