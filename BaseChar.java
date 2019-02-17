@@ -240,6 +240,9 @@ public class BaseChar{
 	default:
 	    result = new BaseChar("NoInput", "NoInput", 0, 0, 0, 0, 0, 0, 0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, false, 0);
 	}
+	if(result.getHardBonuses()){
+            result.hardModeBonuses();
+	}
 	return result;
     }
 
@@ -291,6 +294,78 @@ public class BaseChar{
 	default:
 	    result = new BaseChar("NoInput", "NoInput", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, false, 0);
 	}
+	if(result.getHardBonuses()){
+	    result.hardModeBonuses();
+	}
 	return result;
+    }
+
+    public void hardModeBonuses(){
+	switch(Name){
+	case "Dorcas":
+	    BaseHP += 5*.85;
+	    BaseStr += 5*.55;
+	    BaseSkl += 5*.35;
+	    BaseSpd += 5*.3;
+	    BaseDef += 5*.15;
+	    BaseRes += 5*.15;
+	    break;
+	case "Guy":
+	    BaseHP += 5*.7;
+	    BaseStr += 5*.35;
+	    BaseSkl += 5*.4;
+	    BaseSpd += 5*.4;
+	    BaseDef += 5*.15;
+	    BaseRes += 5*.2;
+	    break;
+	case "Raven":
+	    BaseHP += 5*.8;
+	    BaseStr += 5*.4;
+	    BaseSkl += 5*.4;
+	    BaseSpd += 5*.32;
+	    BaseDef += 5*.18;
+	    BaseRes += 5*.2;
+	    break;
+	case "Legault":
+	    BaseHP += 5*.5;
+	    BaseStr += 5*.05;
+	    BaseSkl += 5*.45;
+	    BaseSpd += 5*.4;
+	    BaseDef += 5*.05;
+	    BaseRes += 5*.2;
+	    break;
+	case "Heath":
+	    BaseHP += 5*.8;
+	    BaseStr += 5*.45;
+	    BaseSkl += 5*.35;
+	    BaseSpd += 5*.3;
+	    BaseDef += 5*.25;
+	    BaseRes += 5*.15;
+	    break;
+	case "Harken":
+	    BaseHP += 5*.75;
+	    BaseStr += 5*.3;
+	    BaseSkl += 5*.3;
+	    BaseSpd += 5*.2;
+	    BaseDef += 5*.2;
+	    BaseRes += 5*.2;
+	    break;
+	case "Vaida":
+	    BaseHP += 5*.75;
+	    BaseStr += 5*.4;
+	    BaseSkl += 5*.3;
+	    BaseSpd += 5*.2;
+	    BaseDef += 5*.2;
+	    BaseRes += 5*.17;
+	    break;
+	case "Geitz":
+	    BaseHP += 5*.8;
+	    BaseStr += 5*.45;
+	    BaseSkl += 5*.25;
+	    BaseSpd += 5*.2;
+	    BaseDef += 5*.16;
+	    BaseRes += 5*.17;
+	    break;
+	}
     }
 }

@@ -42,7 +42,7 @@ public class CheckChar{
 	return CurDef;
     }
 
-    public double GetCurRes(){
+    public double getCurRes(){
 	return CurRes;
     }
 
@@ -74,25 +74,25 @@ public class CheckChar{
 
     public void addStatBoosters(String data){ //Adds extra stats gained through stat boosting items
 	String[] splitted = data.split(" ");
-	for(int AddHP = Integer.parseInt(splitted[10]); AddHP > 0; AddHP--){
+	for(int AddHP = Integer.parseInt(splitted[11]); AddHP > 0; AddHP--){
 	    CurHP += 7;
 	}
-	for(int AddStr = Integer.parseInt(splitted[11]); AddStr > 0; AddStr--){
+	for(int AddStr = Integer.parseInt(splitted[12]); AddStr > 0; AddStr--){
 	    CurStr += 2;
 	} 
-	for(int AddSkl = Integer.parseInt(splitted[12]); AddSkl > 0; AddSkl--){
+	for(int AddSkl = Integer.parseInt(splitted[13]); AddSkl > 0; AddSkl--){
 	    CurSkl += 2;
 	}
-	for(int AddSpd = Integer.parseInt(splitted[13]); AddSpd > 0; AddSpd--){
+	for(int AddSpd = Integer.parseInt(splitted[14]); AddSpd > 0; AddSpd--){
 	    CurSpd += 2;
 	}
-	for(int AddLck = Integer.parseInt(splitted[14]); AddLck > 0; AddLck--){
+	for(int AddLck = Integer.parseInt(splitted[15]); AddLck > 0; AddLck--){
 	    CurLck += 2;
 	}
-	for(int AddDef = Integer.parseInt(splitted[15]); AddDef > 0; AddDef--){
+	for(int AddDef = Integer.parseInt(splitted[16]); AddDef > 0; AddDef--){
 	    CurDef += 2;
 	}
-	for(int AddRes = Integer.parseInt(splitted[16]); AddRes > 0; AddRes--){
+	for(int AddRes = Integer.parseInt(splitted[17]); AddRes > 0; AddRes--){
 	    CurRes += 2;
 	}	
     }

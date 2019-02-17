@@ -9,13 +9,13 @@ public class CurrentChar{
     public CurrentChar(String data){
 	String[] splitted = data.split(" ");
 	CurClass = splitted[1];
-	CurHP = Integer.parseInt(splitted[3]);
-	CurStr = Integer.parseInt(splitted[4]);
-	CurSkl = Integer.parseInt(splitted[5]);
-	CurSpd = Integer.parseInt(splitted[6]);
-	CurLck = Integer.parseInt(splitted[7]);
-	CurDef = Integer.parseInt(splitted[8]);
-	CurRes = Integer.parseInt(splitted[9]);
+	CurHP = Integer.parseInt(splitted[4]);
+	CurStr = Integer.parseInt(splitted[5]);
+	CurSkl = Integer.parseInt(splitted[6]);
+	CurSpd = Integer.parseInt(splitted[7]);
+	CurLck = Integer.parseInt(splitted[8]);
+	CurDef = Integer.parseInt(splitted[9]);
+	CurRes = Integer.parseInt(splitted[10]);
     }
 
     public BaseChar getBases(){
