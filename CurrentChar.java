@@ -6,8 +6,9 @@ public class CurrentChar{
     private int CurHP, CurStr, CurSkl, CurSpd, CurLck, CurDef, CurRes; //Creates variables for the player's current stats
     private String CurClass; //Creates a varibale for the player's current class.
 
-    public CurrentChar(String data){
+    public CurrentChar(String data, String storyStart, boolean hard){
 	String[] splitted = data.split(" ");
+	Bases = BaseChar.createBaseUnit(splitted[0], storyStart, hard);
 	CurClass = splitted[1];
 	CurHP = Integer.parseInt(splitted[4]);
 	CurStr = Integer.parseInt(splitted[5]);

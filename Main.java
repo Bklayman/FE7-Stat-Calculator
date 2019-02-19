@@ -7,7 +7,35 @@ public class Main{
 
     public static void main(String[] args){
 	List<String> dataList = getData(args[0]);
-	String difficulty = dataList.get(0);
+	String data1 = dataList.get(0);
+	data1.trim();
+	String[] splitted = data1.split(" ");
+	String difficulty = splitted[0];
+	boolean hard;
+	if(difficulty.equals("Hard")){
+	    hard = true;
+	} else {
+	    hard = false;
+	}
+	String storyStart = splitted[1];
+	boolean willPromote = false;
+	for(int i = 1; i < dataList.size(); i++){
+	    CurrentChar current = new CurrentChar(dataList.get(i), storyStart, hard);
+	    CheckChar check = new CheckChar(current.getBases());
+	    do{
+		int levelsNeeded = levelsNeeded(dataList.get(i), check, current);
+		check.gainLevels(current.getBases(), levelsNeeded);
+		check.checkStatCaps();
+		if(!check.getCharClass().equals(current.getCurClass())){
+		    check.classChange(current.getBases().getName());
+		    willPromote = true;
+		} else {
+		    willPromote = false;
+		}
+	    } while(willPromote);
+	    check.addStatBoosters(dataList.get(i));
+	    printResults(check, current);
+	} 
     }    
 
     public static List<String> getData(String fileName){
@@ -15,14 +43,10 @@ public class Main{
 	return using.getData();
     }
 
-    public static CurrentChar getCurrentChar(String data){
-	return new CurrentChar(data);
-    }
-
     public static int levelsNeeded(String data, CheckChar check, CurrentChar current){
 	String[] splitted = data.split(" ");
 	if(check.getCharClass() != current.getCurClass()){
-	    return Integer.parseInt(splitted[3]);
+	    return Integer.parseInt(splitted[3]) - check.getCurLvl();
 	} else {
 	    return Integer.parseInt(splitted[2]) - check.getCurLvl();
 	}
