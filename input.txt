@@ -8,3 +8,4 @@ Canas Shaman 17 0 29 15 11 13 10 5 14 0 0 0 0 0 0 0
 Lowen Paladin 1 17 38 15 12 12 13 14 7 0 0 1 0 0 0 0
 Ninian Dancer 3 0 16 0 0 14 12 6 5 0 0 0 0 0 0 0
 Hawkeye Berserker 6 0 51 19 15 11 14 14 12 0 0 0 0 0 0 0
+Hector Great Lord 1 15 35 15 13 13 9 18 6 0 0 0 0 0 0 0

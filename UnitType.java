@@ -74,11 +74,11 @@ public class UnitType{
 
     public static UnitType createClass(String name){
 	switch(name){
-	case "Blade Lord":
+	case "Blade_Lord":
 	    return new UnitType(60, 27, 26, 24, 30, 23, 25, 3, 2, 2, 0, 3, 5);
-	case "Knight Lord":
+	case "Knight_Lord":
 	    return new UnitType(60, 27, 26, 24, 30, 23, 25, 4, 2, 0, 1, 1, 3);
-	case "Great Lord":
+	case "Great_Lord":
 	    return new UnitType(60, 30, 24, 24, 30, 29, 20, 3, 0, 2, 3, 1, 5);
 	case "Dancer":
 	    return new UnitType(60, 10, 10, 30, 30, 24, 26, 0, 0, 0, 0, 0, 0);
@@ -100,7 +100,7 @@ public class UnitType{
 	    return new UnitType(60, 25, 30, 28, 30, 25, 23, 3, 1, 2, 2, 2, 3);
 	case "Sniper(F)":
 	    return new UnitType(60, 24, 30, 29, 30, 24, 24, 4, 3, 1, 1, 2, 2);
-	case "Nomad Trooper":
+	case "Nomad_Trooper":
 	    return new UnitType(60, 25, 28, 30, 30, 24, 23, 3, 2, 1, 1, 3, 3);
 	case "Wyvern Lord":
 	    return new UnitType(60, 27, 25, 23, 30, 28, 22, 4, 0, 2, 2, 0, 2);

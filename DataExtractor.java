@@ -15,6 +15,16 @@ public class DataExtractor{
 	try(Scanner reader = new Scanner(new File(fileName))){
 		while(reader.hasNext()){
 		    String next = reader.nextLine();
+		    String[] splitted = next.split(" ");
+		    if(splitted.length == 19){
+			String firstWord = splitted[1];
+			String secondWord = splitted[2];
+			String combined = firstWord + "_" + secondWord;
+			next = splitted[0] + " " + combined + " ";
+			for(int i = 3; i < splitted.length; i++){
+			    next += splitted[i] + " ";
+			}
+		    }
 		    data.add(next);
 		}
 	}

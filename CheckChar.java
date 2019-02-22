@@ -136,11 +136,11 @@ public class CheckChar{
         switch(CharClass){
 	case "Lord":
 	    if(name.equals("Lyn")){
-		CharClass = "Blade Lord";
+		CharClass = "Blade_Lord";
 	    } else if(name.equals("Hector")){
-		CharClass = "Great Lord";
+		CharClass = "Great_Lord";
 	    } else if(name.equals("Eliwood")){
-		CharClass = "Knight Lord";
+		CharClass = "Knight_Lord";
 	    }
 	    break;
 	case "Cavalier":
@@ -166,10 +166,10 @@ public class CheckChar{
 	    }
 	    break;
 	case "Nomad":
-	    CharClass = "Nomad Trooper";
+	    CharClass = "Nomad_Trooper";
 	    break;
-	case "Wyvern Rider":
-	    CharClass = "Wyvern Lord";
+	case "Wyvern_Rider":
+	    CharClass = "Wyvern_Lord";
 	    break;
 	case "Mage":
 	    if(name.equals("Erk")){
