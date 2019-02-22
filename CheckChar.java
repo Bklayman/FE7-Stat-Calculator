@@ -193,7 +193,7 @@ public class CheckChar{
 	case "Pirate":
 	    CharClass = "Berserker";
 	    break;
-	case "Pegasus Knight":
+	case "Pegasus_Knight":
 	    CharClass = "Falcoknight";
 	    break;
 	case "Troubadour":

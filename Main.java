@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.io.File;
 import java.io.*;
 import java.io.FileNotFoundException;
+import java.text.DecimalFormat;
 
 public class Main{
 
@@ -69,40 +70,55 @@ public class Main{
 	diffLck = check.getCurLck() - (double) current.getCurLck();
 	diffDef = check.getCurDef() - (double) current.getCurDef();
 	diffRes = check.getCurRes() - (double) current.getCurRes();
-	if(diffHP <= 0){
-	    pw.println("     Their HP is " + -1 * diffHP + " points higher than average (" + check.getCurHP() + ").");
+	DecimalFormat df = new DecimalFormat("###.##");
+	if(diffHP < 0){
+	    pw.println("     Their HP is " + df.format(-1 * diffHP) + " points higher than average (" + df.format(check.getCurHP()) + ").");
+	} else if(diffHP > 0) {
+	    pw.println("     Their HP is " + df.format(diffHP) + " points lower than average (" + df.format(check.getCurHP()) + ").");
 	} else {
-	    pw.println("     Their HP is " + diffHP + " points lower than average (" + check.getCurHP() + ").");
+	    pw.println("     Their HP is average (" + df.format(check.getCurHP()) + ").");
 	}
-	if(diffStr <= 0){
-	    pw.println("     Their strength is " + -1 * diffStr + " points higher than average (" + check.getCurStr() + ").");
+	if(diffStr < 0){
+	    pw.println("     Their strength is " + df.format(-1 * diffStr) + " points higher than average (" + df.format(check.getCurStr()) + ").");
+	} else if(diffStr > 0){
+	    pw.println("     Their strength is " + df.format(diffStr) + " points lower than average (" + df.format(check.getCurStr()) + ").");
 	} else {
-	    pw.println("     Their strength is " + diffStr + " points lower than average (" + check.getCurStr() + ").");
+	    pw.println("     Their strength is average (" + df.format(check.getCurStr()) + ").");
 	}
-	if(diffSkl <= 0){
-	    pw.println("     Their skill is " + -1 * diffSkl + " points higher than average (" + check.getCurSkl() + ").");
+	if(diffSkl < 0){
+	    pw.println("     Their skill is " + df.format(-1 * diffSkl) + " points higher than average (" + df.format(check.getCurSkl()) + ").");
+	} else if(diffSkl > 0){
+	    pw.println("     Their skill is " +  df.format(diffSkl) + " points lower than average (" + df.format(check.getCurSkl()) + ").");
 	} else {
-	    pw.println("     Their skill is " +  diffSkl + " points lower than average (" + check.getCurSkl() + ").");
+	    pw.println("Their skill is average (" + df.format(check.getCurSkl()) + ").");
 	}
-	if(diffSpd <= 0){
-	    pw.println("     Their speed is " + -1 * diffSpd + " points higher than average (" + check.getCurSpd() + ").");
+	if(diffSpd < 0){
+	    pw.println("     Their speed is " + df.format(-1 * diffSpd) + " points higher than average (" + df.format(check.getCurSpd()) + ").");
+	} else if(diffSpd > 0){
+	    pw.println("     Their speed is " + df.format(diffSpd) + " points lower than average (" + df.format(check.getCurSpd()) + ").");
 	} else {
-	    pw.println("     Their speed is " + diffSpd + " points lower than average (" + check.getCurSpd() + ").");
+	    pw.println("     Their speed is average (" + df.format(check.getCurSpd()) + ").");
 	}
-	if(diffLck <= 0){
-	    pw.println("     Their luck is " + -1 * diffLck + " points higher than average (" + check.getCurLck() + ").");
+	if(diffLck < 0){
+	    pw.println("     Their luck is " + df.format(-1 * diffLck) + " points higher than average (" + df.format(check.getCurLck()) + ").");
+	} else if(diffLck > 0) {
+	    pw.println("     Their luck is " + df.format(diffLck) + " points lower than average (" + df.format(check.getCurLck()) + ").");
 	} else {
-	    pw.println("     Their luck is " + diffLck + " points lower than average (" + check.getCurLck() + ").");
+	    pw. println("     Their luck is average (" + df.format(check.getCurLck()) + ").");
 	}
-	if(diffDef <= 0){
-	    pw.println("     Their defense is " + -1 * diffDef + " points higher than average (" + check.getCurDef() + ").");
+	if(diffDef < 0){
+	    pw.println("     Their defense is " + df.format(-1 * diffDef) + " points higher than average (" + df.format(check.getCurDef()) + ").");
+	} else if(diffDef > 0){
+	    pw.println("     Their defense is " + df.format(diffDef) + " points lower than average (" + df.format(check.getCurDef()) + ").");
 	} else {
-	    pw.println("     Their defense is " + diffDef + " points lower than average (" + check.getCurDef() + ").");
+	    pw.println("     Their defense is average (" + df.format(check.getCurDef()) + ").");
 	}
-	if(diffRes <= 0){
-	    pw.println("     Their resistance is " + -1 * diffRes + " points higher than average (" + check.getCurRes() + ").");
+	if(diffRes < 0){
+	    pw.println("     Their resistance is " + df.format(-1 * diffRes) + " points higher than average (" + df.format(check.getCurRes()) + ").");
+	} else if(diffRes > 0){
+	    pw.println("     Their resistance is " + df.format(diffRes) + " points lower than average (" + df.format(check.getCurRes()) + ").");
 	} else {
-	    pw.println("     Their resistance is " + diffRes + " points lower than average (" + check.getCurRes() + ").");
+	    pw.println("     Their resistance is average (" + df.format(check.getCurRes()) + ").");
 	}
     }
 
