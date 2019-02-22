@@ -45,7 +45,7 @@ public class Main{
 
     public static int levelsNeeded(String data, CheckChar check, CurrentChar current){
 	String[] splitted = data.split(" ");
-	if(check.getCharClass() != current.getCurClass()){
+	if(!check.getCharClass().equals(current.getCurClass())){
 	    return Integer.parseInt(splitted[3]) - check.getCurLvl();
 	} else {
 	    return Integer.parseInt(splitted[2]) - check.getCurLvl();
@@ -62,38 +62,38 @@ public class Main{
 	diffLck = check.getCurLck() - (double) current.getCurLck();
 	diffDef = check.getCurDef() - (double) current.getCurDef();
 	diffRes = check.getCurRes() - (double) current.getCurRes();
-	if(diffHP >= 0){
-	    System.out.println("Their HP is " + diffHP + " points higher than average (" + check.getCurHP() + ").");
+	if(diffHP <= 0){
+	    System.out.println("Their HP is " + -1 * diffHP + " points higher than average (" + check.getCurHP() + ").");
 	} else {
 	    System.out.println("Their HP is " + diffHP + " points lower than average (" + check.getCurHP() + ").");
 	}
-	if(diffStr >= 0){
-	    System.out.println("Their strength is " + diffStr + " points higher than average (" + check.getCurStr() + ").");
+	if(diffStr <= 0){
+	    System.out.println("Their strength is " + -1 * diffStr + " points higher than average (" + check.getCurStr() + ").");
 	} else {
 	    System.out.println("Their strength is " + diffStr + " points lower than average (" + check.getCurStr() + ").");
 	}
-	if(diffSkl >= 0){
-	    System.out.println("Their skill is " + diffSkl + " points higher than average (" + check.getCurSkl() + ").");
+	if(diffSkl <= 0){
+	    System.out.println("Their skill is " + -1 * diffSkl + " points higher than average (" + check.getCurSkl() + ").");
 	} else {
-	    System.out.println("Their skill is " + diffSkl + " points lower than average (" + check.getCurSkl() + ").");
+	    System.out.println("Their skill is " +  diffSkl + " points lower than average (" + check.getCurSkl() + ").");
 	}
-	if(diffSpd >= 0){
-	    System.out.println("Their speed is " + diffSpd + " points higher than average (" + check.getCurSpd() + ").");
+	if(diffSpd <= 0){
+	    System.out.println("Their speed is " + -1 * diffSpd + " points higher than average (" + check.getCurSpd() + ").");
 	} else {
 	    System.out.println("Their speed is " + diffSpd + " points lower than average (" + check.getCurSpd() + ").");
 	}
-	if(diffLck >= 0){
-	    System.out.println("Their luck is " + diffLck + " points higher than average (" + check.getCurLck() + ").");
+	if(diffLck <= 0){
+	    System.out.println("Their luck is " + -1 * diffLck + " points higher than average (" + check.getCurLck() + ").");
 	} else {
 	    System.out.println("Their luck is " + diffLck + " points lower than average (" + check.getCurLck() + ").");
 	}
-	if(diffDef >= 0){
-	    System.out.println("Their defense is " + diffDef + " points higher than average (" + check.getCurDef() + ").");
+	if(diffDef <= 0){
+	    System.out.println("Their defense is " + -1 * diffDef + " points higher than average (" + check.getCurDef() + ").");
 	} else {
 	    System.out.println("Their defense is " + diffDef + " points lower than average (" + check.getCurDef() + ").");
 	}
-	if(diffRes >= 0){
-	    System.out.println("Their resistance is " + diffRes + " points higher than average (" + check.getCurRes() + ").");
+	if(diffRes <= 0){
+	    System.out.println("Their resistance is " + -1 * diffRes + " points higher than average (" + check.getCurRes() + ").");
 	} else {
 	    System.out.println("Their resistance is " + diffRes + " points lower than average (" + check.getCurRes() + ").");
 	}

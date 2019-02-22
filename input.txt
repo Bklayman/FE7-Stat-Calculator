@@ -1,2 +1,10 @@
 Hard Eliwood
-Lyn Lord 10 0 19 7 10 15 9 5 3 0 0 0 0 0 0 0
+Priscilla Valkyrie 1 10 22 11 11 10 13 8 15 0 0 0 0 0 0 0
+Eliwood Lord 12 0 26 11 7 13 11 8 5 0 0 0 0 0 0 0
+Marcus Paladin 9 0 36 17 20 12 11 11 10 0 0 0 0 0 0 0
+Kent Cavalier 13 0 30 12 12 12 4 8 2 0 1 1 0 0 0 0
+Raven Mercenary 15 0 35 14 16 16 8 7 2 0 0 0 0 2 0 0
+Canas Shaman 17 0 29 15 11 13 10 5 14 0 0 0 0 0 0 0
+Lowen Paladin 1 17 38 15 12 12 13 14 7 0 0 1 0 0 0 0
+Ninian Dancer 3 0 16 0 0 14 12 6 5 0 0 0 0 0 0 0
+Hawkeye Berserker 6 0 51 19 15 11 14 14 12 0 0 0 0 0 0 0
