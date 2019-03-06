@@ -104,19 +104,19 @@ public class BaseChar{
     public static BaseChar createBaseUnit(String name, String storyStart, boolean hard){
 	storyStart.toLowerCase();
 	if(storyStart.equals("eliwood") || storyStart.equals("hector")){
-	    return createBaseUnitEli(name, hard);
+	    return createBaseUnitEli(name, hard, storyStart);
 	} else {
 	    name.toLowerCase();
 	    if(name.equals("lyn") || name.equals("sain") || name.equals("kent") || name.equals("florina") || name.equals("wil") || name.equals("dorcas") || name.equals("serra") || name.equals("erk") || name.equals("rath") || name.equals("matthew") || name.equals("nils") || name.equals("ninian") || name.equals("lucius") || name.equals("wallace")){
 		return createBaseUnitLyn(name, hard);
 	    } else {
-		return createBaseUnitEli(name, hard);
+		return createBaseUnitEli(name, hard, storyStart);
 	    }
 	}
     }
 
     //Creating each unit with the bases they have as they join
-    public static BaseChar createBaseUnitEli(String name, boolean hard){
+    public static BaseChar createBaseUnitEli(String name, boolean hard, String storyStart){
 	BaseChar result;
 	switch(name.toLowerCase()){
 	case "eliwood":
@@ -254,7 +254,7 @@ public class BaseChar{
 	default:
 	    result = new BaseChar("NoInput", "NoInput", 0, 0, 0, 0, 0, 0, 0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, false, 0);
 	}
-	if(result.getHardBonuses() && hard){
+	if(result.getHardBonuses() && hard && storyStart.equals("Hector")){
             result.hardModeBonuses();
 	}
 	return result;
@@ -307,9 +307,6 @@ public class BaseChar{
 	    break;
 	default:
 	    result = new BaseChar("NoInput", "NoInput", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, false, 0);
-	}
-	if(result.getHardBonuses() && hard){
-	    result.hardModeBonuses();
 	}
 	return result;
     }
